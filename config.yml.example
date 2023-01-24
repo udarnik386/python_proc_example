@@ -1,0 +1,25 @@
+locations: # локации произвольны, число не ограничено
+  ru:
+    routers:
+      - ip: 172.16.0.1
+        owner: company
+      - ip: 172.16.1.1
+        owner: company
+  fi:
+    routers:
+      - ip: 192.168.0.1
+        owner: company
+        login: local_login # приоритетно берется локальный логин (если есть)
+        pass: local_pass # приоритетно берется локальный пароль (если есть)
+      - ip: 192.168.1.1
+        owner: company
+  ch:
+    routers:
+      - ip: 10.10.0.1
+        owner: company
+      - ip: 10.10.1.1
+        owner: company
+creds:
+  company: # глобальные логин и пароль выбираются на основе owner рутера
+    login: global_login # глобальный логин, используется, если не указан локальный
+    pass: global_pass # глобальный пароль, используется, если не указан локальный
